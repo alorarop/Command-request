@@ -1,0 +1,140 @@
+<!-- Exercice 1 de la série de TP numeréo 3 , tableu et commande de produits -->
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Formulaire de commande pour Les Délices de Fès.">
+    <title>Les Délices de Fès</title>
+    <link rel="stylesheet" href="command.css">
+
+</head>
+
+<body>
+    <!-- Page Title -->
+
+
+    <h1>Formulaire de commande</h1>
+
+    <!-- Paragraph Introduction -->
+    <p>Bienvenue sur notre formulaire de commande. Choisissez vos produits préférés parmi notre gamme variée et passez commande facilement.</p>
+
+    <!-- Table with Products -->
+    <h2>Produits disponibles</h2>
+    <table border="1">
+        <caption>Liste des produits</caption>
+        <thead>
+            <tr>
+                <th>Produit</th>
+                <th>Quantité (g)</th>
+                <th>Prix (MAD)</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Sellou</td>
+                <td>1000</td>
+                <td rowspan="2"> 60 </td>
+            </tr>
+            <tr>
+                <td>Chebakia</td>
+                <td>1000</td>
+            </tr>
+            <tr>
+                <td>Pastilla Fruits de Mer</td>
+                <td>2000</td>
+                <td>300</td>
+            </tr>
+            <tr>
+                <td>Pastilla Poullet</td>
+                <td>2000</td>
+                <td>250</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <!-- Form -->
+    <form action="#" method="post">
+        <!-- Group 1: Personal Details  MOSTLY LABEL FOR & INPUT TYPE :CREATING CHAMPS AND JUMPING TO A NEW LINE EVERYTIME BY BR BR  -->
+        <fieldset>
+            <legend>Vos coordonnées</legend>
+            <label for="nom">Nom:</label>
+            <input type="text" id="nom" name="nom" required> <br><br>
+
+            <label for="prenom">Prénom:</label>
+            <input type="text" id="prenom" name="prenom" required><br><br>
+
+            <label for="dob">Date de naissance:</label>
+            <input type="date" id="dob" name="dob" required><br><br>
+
+            <label for="adresse">Adresse:</label>
+            <input type="text" id="adresse" name="adresse" required><br><br>
+
+            <label for="ville">Ville:</label>
+            <input type="text" id="ville" name="ville"required><br><br>
+
+            <label for="pays">Pays:</label>
+            <input type="text" id="pays" name="pays"required><br><br>
+
+            <label for="telephone">Téléphone:</label>
+            <input type="tel" id="telephone" name="telephone"required><br>
+        </fieldset>
+
+        <!-- Group 2: Order Details : ON FAIT APPARAITRE LES OPTION UTLIZONS SELECT POUR FAIRE DES OPTION  -->
+        <fieldset>
+            <legend>Vos choix des commandes</legend>
+            <label for="commande">Commande:</label>
+            <select id="commande" name="commande">
+                <option>Sellou</option>
+                <option>Chebakia</option>
+                <option>Pastilla Fruits de Mer</option>
+                <option>Pastilla Poullet </option>
+            </select>
+            <label for="packaging">Packaging:</label>
+            <select id="packaging" name="packaging">
+                <option>Standard</option>
+                <option>Premium</option>
+            </select><br><br>
+
+            <label for="quantite">Quantité:</label>
+            <input type="number" id="quantite" name="quantite" min="1" required><br>
+        </fieldset>
+
+        <!-- Group 3: Payment Method -->
+        <fieldset>
+            <legend>Mode de paiement</legend>
+            <label>
+                <input type="radio" name="paiement" value="livraison"> Paiement à la livraison
+            </label><br><br>
+            <label>
+                <input type="radio" name="paiement" value="carte">    Paiement avec carte
+            </label><br><br>
+
+            <label for="carte-nom">Propriétaire de la carte:</label>
+            <input type="text" id="carte-nom" name="carte-nom"><br><br>
+
+            <label for="carte-numero">Numéro de la carte:</label>
+            <input type="text" id="carte-numero" name="carte-numero"><br><br>
+
+            <label for="carte-exp">Date d’expiration:</label>
+            <input type="month" id="carte-exp" name="carte-exp"><br><br>
+
+            <label for="carte-password">mot de pass :</label>
+            <input type="password" id="carte-password" name="carte-password"> <br>
+        </fieldset>
+
+        <!-- Group 4: Upload Photo -->
+        <fieldset>
+            <legend>Charger votre photo</legend>
+            <label for="photo">Photo:</label>
+            <input type="file" id="photo" name="photo" required><br>
+        </fieldset>
+
+        <!-- Buttons -->
+        <button type="submit">Soumétre</button>
+        <button type="reset">Vider</button>
+    </form>
+</body>
+
+</html>
